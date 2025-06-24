@@ -15,6 +15,9 @@ Currently, the GUI is implemented in the [k_space_explorer notebook](./k_space_e
 4. **Draw a mask** on the K-Space
 5. **The reconstructed image** corresponding to the selected K-Space area is automatically shown on the right
 
+### Example
+<img src="media/gui_example_hms.png" width="60%" alt="gui example">
+
 ## Dependencies
 All dependencies are listed in [```requirements.txt```](./requirements.txt)
 
