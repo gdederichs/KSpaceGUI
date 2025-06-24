@@ -1,7 +1,7 @@
 # K-Space Explorer
 The GUI presented here primarily functions as a learning tool to explore the relationsihp between the K- and Image- space.
 
-## Backgroud
+## Background
 coming soon
 
 ## Usage
