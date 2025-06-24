@@ -1,6 +1,7 @@
 # kspace_core.py
 
 import numpy as np
+from scipy.fft import fft2, ifft2, fftshift, ifftshift
 import matplotlib.pyplot as plt
 from matplotlib.widgets import LassoSelector
 from matplotlib.path import Path
@@ -49,7 +50,7 @@ class KSpaceInteractive:
         img_gray = cv2.cvtColor(img_color, cv2.COLOR_BGR2GRAY)
         self.img = cv2.resize(img_gray, (256, 256))
 
-        self.k_space = np.fft.fftshift(np.fft.fft2(self.img))
+        self.k_space = fftshift(fft2(self.img))
         self.show_k_space()
 
     def show_k_space(self):
@@ -100,7 +101,7 @@ class KSpaceInteractive:
 
     def show_reconstructed_image(self):
         # reconstruct image from masked k-space
-        recon = np.fft.ifft2(np.fft.ifftshift(self.masked_kspace))
+        recon = ifft2(ifftshift(self.masked_kspace))
         recon_abs = np.abs(recon)
         recon_norm = (recon_abs - recon_abs.min()) / (recon_abs.max() - recon_abs.min())
 
