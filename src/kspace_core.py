@@ -111,7 +111,7 @@ class KSpaceInteractive:
         else:
             self.im_recon.set_data(recon_norm)
 
-        self.ax2.set_title("Reconstructed from Masked k-space")
+        self.ax2.set_title("Reconstructed from k-space selection")
         self.ax2.set_xticks([])
         self.ax2.set_yticks([])
         self.fig.canvas.draw_idle()
